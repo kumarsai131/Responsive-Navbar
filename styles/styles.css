@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Ubuntu', sans-serif;;
+}
+
+.container nav.desk,.container nav.mobile{
+    width:100%;
+    background: gray;
+    height: 60px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav.desk ul{
+    list-style: none;
+    width:75;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+nav.desk ul li{
+    width: 20%;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px;
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+}
+
+nav.desk ul li:hover, nav.mobile ul li:hover{
+    background: #a3ada5;
+
+}
+
+nav.desk ul li.active,nav.mobile ul li.active{
+    background: #a3ada5;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+ 
+.mobile{
+    display: none;
+}
+
+.img{
+    width: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width:700px){
+    nav.desk{
+        display: none;
+    }
+
+    .img{
+        width: 100%;
+        height: auto;
+        z-index: -1;
+    }
+
+    
+    nav.mobile, .hamburger{
+        display: block;
+    }
+
+    .hamburger{
+        position: relative;
+    }
+
+    .hamburger .fa-bars, .hamburger .fa-window-close{
+        position: fixed;
+        right: 25px;
+        top: 15px;
+        font-size: 35px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .mobile ul{
+        margin-top: 60px;
+        background: gray;
+        display: none;
+
+    }
+
+    .mobile li{
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .mobile ul.active{
+        display: block;
+    }
+
+}

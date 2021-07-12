@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/f6afe929bc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".hamburger .fa-window-close").hide();
+
+            $(".hamburger .fa-bars").click(function(){
+                $(this).hide();
+                $(".hamburger .fa-window-close").show();
+                $(".mobile ul").addClass("active");
+            });
+
+            $(".hamburger .fa-window-close").click(function(){
+                $(this).hide();
+                $(".hamburger .fa-bars").show();
+                $(".mobile ul").removeClass("active");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="desk">
+            <ul>
+                <li class="active"><a href="" class="">Home</a></li>
+                <li><a href="" class="nav-item">Contact</a></li>
+                <li><a href="" class="nav-item">About</a></li>
+                <li><a href="" class="nav-item">Maps</a></li>
+                <li><a href="" class="nav-item">Blog</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile">
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-window-close"></i>
+            </div>
+            <ul>
+                <li class="active"><a href="" class="nav-item">Home</a></li>
+                <li><a href="" class="nav-item">Contact</a></li>
+                <li><a href="" class="nav-item">About</a></li>
+                <li><a href="" class="nav-item">Maps</a></li>
+                <li><a href="" class="nav-item">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="img">
+            <img src = "images.jpg" class="logo" width="100%" height="auto">
+        </div>
+    </div>
+    
+</body>
+</html>
